@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true"
+        android:spinnerMode="dialog"/>
+
+    <ListView
+        android:id = "@+id/wifiList"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_above = "@+id/scanBtn"
+        android:layout_below="@+id/spinner"
+        android:visibility="gone"/>
+    <Button
+        android:id = "@+id/scanBtn"
+        android:layout_width = "match_parent"
+        android:layout_height = "50dp"
+        android:layout_alignParentBottom = "true"
+        android:layout_gravity = "bottom"
+        android:layout_margin = "15dp"
+        android:text = "Scan WiFi"
+        android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
+        app:fabSize="normal"
+        android:src="@drawable/ic_baseline_add_24"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/todo" />
+
+</RelativeLayout>
